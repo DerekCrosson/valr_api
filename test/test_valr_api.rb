@@ -49,7 +49,9 @@ class TestValrApi < Minitest::Test
       ].to_json, headers: {})
 
     stub_request(:post, "https://api.valr.com/v1/orders/limit")
-      .with(body: "side=SELL&quantity=0.100000&price=10000&pair=BTCZAR&postOnly=true&customerOrderId=1235") { |req| headers_keys_match?(req.headers) }
+      .with(body: "side=SELL&quantity=0.100000&price=10000&pair=BTCZAR&postOnly=true&customerOrderId=1235") do |req|
+      headers_keys_match?(req.headers)
+    end
       .to_return(status: 202, body: { "id": "558f5e0a-ffd1-46dd-8fae-763d93fa2f25" }.to_json, headers: {})
 
     stub_request(:delete, "https://api.valr.com/v1/orders/order")
