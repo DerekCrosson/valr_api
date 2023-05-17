@@ -64,13 +64,13 @@ class TestValrApi < Minitest::Test
       headers.key?("X-Valr-Timestamp")
   end
 
-  def test_get_endpoint
-    response = @client.get_endpoint("/public/currencies")
+  def test_get
+    response = @client.get("/public/currencies")
     assert response.success?, "GET request failed"
   end
 
-  def test_post_endpoint
-    response = @client.post_endpoint("/orders/limit", {
+  def test_post
+    response = @client.post("/orders/limit", {
                                        "side": "SELL",
                                        "quantity": "0.100000",
                                        "price": "10000",
@@ -81,8 +81,8 @@ class TestValrApi < Minitest::Test
     assert response.success?, "POST request failed"
   end
 
-  def test_delete_endpoint
-    response = @client.delete_endpoint("/orders/order")
+  def test_delete
+    response = @client.delete("/orders/order")
     assert response.success?, "DELETE request failed"
   end
 end

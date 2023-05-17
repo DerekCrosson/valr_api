@@ -16,17 +16,17 @@ module ValrApi
       @api_secret = api_secret
     end
 
-    def get_endpoint(endpoint)
+    def get(endpoint)
       sign_request("GET", endpoint)
       self.class.get(endpoint, headers: headers)
     end
 
-    def post_endpoint(endpoint, options = {})
+    def post(endpoint, options = {})
       sign_request("POST", endpoint, options)
       self.class.post(endpoint, { body: options, headers: headers })
     end
 
-    def delete_endpoint(endpoint)
+    def delete(endpoint)
       sign_request("DELETE", endpoint)
       self.class.delete(endpoint, headers: headers)
     end
