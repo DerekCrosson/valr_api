@@ -33,10 +33,10 @@ After initializing the client, you can send GET, POST, and DELETE requests to th
 Here are some sample requests:
 ```ruby
 # GET request
-response = client.get_endpoint("/public/currencies")
+response = client.get("/public/currencies")
 
 # POST request
-response = client.post_endpoint("/orders/limit", {
+response = client.post("/orders/limit", {
   "side": "SELL",
   "quantity": "0.100000",
   "price": "10000",
@@ -46,7 +46,7 @@ response = client.post_endpoint("/orders/limit", {
 })
 
 # DELETE request
-response = client.delete_endpoint("/orders/order")
+response = client.delete("/orders/order")
 
 ```
 
