@@ -9,6 +9,11 @@ Install the gem and add to the application's Gemfile by executing:
 bundle add valr_api
 ```
 
+Or add the following to your `Gemfile`:
+```zsh
+gem 'valr_api', '~> 0.2.1'
+```
+
 Then execute:
 ```zsh
 bundle install
