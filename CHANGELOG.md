@@ -1,5 +1,10 @@
 ## [0.2.0] - 2023-05-17
 
+- Update docs - code of conduct link
+
+
+## [0.2.0] - 2023-05-17
+
 - Change client method names to match request type
 - Update docs
 
