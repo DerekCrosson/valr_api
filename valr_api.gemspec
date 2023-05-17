@@ -31,9 +31,9 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
-  spec.add_dependency 'httparty', '~> 0.18'
-  spec.add_development_dependency 'webmock', '~> 3.14'
-  spec.add_dependency 'faye-websocket', '~> 0.10'
+  spec.add_dependency "httparty", "~> 0.18"
+  spec.add_development_dependency "webmock", "~> 3.14"
+  spec.add_dependency "faye-websocket", "~> 0.10"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

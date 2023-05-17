@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 require_relative "valr_api/version"
-require 'httparty'
-require 'openssl'
-require 'faye/websocket'
-require 'eventmachine'
+require "httparty"
+require "openssl"
+require "faye/websocket"
+require "eventmachine"
 
 module ValrApi
   class Client
@@ -46,9 +46,6 @@ module ValrApi
       }
     end
 
-    def headers
-      @headers
-    end
+    attr_reader :headers
   end
 end
-

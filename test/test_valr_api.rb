@@ -71,13 +71,13 @@ class TestValrApi < Minitest::Test
 
   def test_post
     response = @client.post("/orders/limit", {
-                                       "side": "SELL",
-                                       "quantity": "0.100000",
-                                       "price": "10000",
-                                       "pair": "BTCZAR",
-                                       "postOnly": true,
-                                       "customerOrderId": "1235"
-                                     })
+                              "side": "SELL",
+                              "quantity": "0.100000",
+                              "price": "10000",
+                              "pair": "BTCZAR",
+                              "postOnly": true,
+                              "customerOrderId": "1235"
+                            })
     assert response.success?, "POST request failed"
   end
 
